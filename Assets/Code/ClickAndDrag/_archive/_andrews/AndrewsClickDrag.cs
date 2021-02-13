@@ -14,16 +14,14 @@ public class AndrewsClickDrag : MonoBehaviour
 
     private void Update()
     {
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
         if (Input.GetMouseButtonDown(0))
         {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
 
             if (Physics.Raycast(ray, out hit, Mathf.Infinity))
             {
                 distance = Vector3.Distance(ray.origin, hit.point);
-
                 dragObject = hit.rigidbody;
                 orginalPosition = hit.collider.transform.position;
             }
