@@ -6,15 +6,31 @@ public class UIManager : MonoBehaviour
 {
     public static UIManager Instance;
 
-    [SerializeField] Text pullDistance;
+    //[SerializeField] Text pullDistance;
+    [Header("Scene object reference")]
+    [SerializeField] RectTransform canvasRect;
+    [SerializeField] Transform canvasTrans;
+    [SerializeField] Text totalScoreText;
+    [SerializeField] Camera UICamera;
+
+    [Header("Prefab")]
+    [SerializeField] GameObject pf_scoreText;
+
+    UIScoreTextObjectPool pool_ScoreText;
 
     void Awake()
     {
         Instance = this;
+        pool_ScoreText = new UIScoreTextObjectPool(pf_scoreText, canvasRect, canvasTrans);
     }
 
-    public void SetPullDistance (int amount)
+    public void SpawnScoreText (Vector3 worldPosition, int score)
     {
-        pullDistance.text = amount.ToString();
+        pool_ScoreText.Spawn(score.ToString(), worldPosition);
+    }
+
+    public void SetTotalScore (int amount)
+    {
+        totalScoreText.text = amount.ToString();
     }
 }

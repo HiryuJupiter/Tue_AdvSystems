@@ -5,8 +5,13 @@ public class Settings : MonoBehaviour
 {
     public static Settings Instance;
 
-    public float FlapSpeed = 100f;
-    public float FlapRaisedAngle = 90f;
+    [Header("Pinball Machine")]
+    public float FlipperForce = 1500f;
+    public float FlipperRaisedAngle = 115f;
+    public float flipperDamper = 30f;
+
+    [Header("Collision")]
+    public float ValidMinimumForce = 4f;
 
     void Awake()
     {

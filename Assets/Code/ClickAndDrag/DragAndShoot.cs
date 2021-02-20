@@ -83,7 +83,7 @@ public class DragAndShoot : MonoBehaviour
                 
             }
 
-            uiM.SetPullDistance((int)pullDistance);
+            //uiM.SetPullDistance((int)pullDistance);
             dragTarget.position = startingPosition + direction;
         }
     }
