@@ -1707,7 +1707,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh16854
+  m_Name: pb_Mesh22684
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1970,7 +1970,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-54472
+  m_Name: pb_Mesh22758
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4307,6 +4307,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &643621236 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5541927980365925553, guid: f6eb31bf1f39a47408cc29ae5f6cc0a0,
+    type: 3}
+  m_PrefabInstance: {fileID: 3784298986641372459}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &646856729
 Mesh:
   m_ObjectHideFlags: 0
@@ -4483,7 +4489,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-2354
+  m_Name: pb_Mesh-7030
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4647,7 +4653,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1870
+  m_Name: pb_Mesh-6562
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -5324,7 +5330,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1062469751
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5334,7 +5340,7 @@ RectTransform:
   m_GameObject: {fileID: 1062469750}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.41734, y: 0.41734, z: 0.41734}
   m_Children: []
   m_Father: {fileID: 1608203491}
   m_RootOrder: 5
@@ -5353,11 +5359,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1062469750}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6bc9aa3c3208cd41b8661af3ef57528, type: 3}
+  m_Script: {fileID: 11500000, guid: f38e2fb6a092ef44f9be4962514ba4d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  followTarget: {fileID: 764428632}
-  canvasRect: {fileID: 0}
+  canvsRect: {fileID: 1608203491}
+  followTarget: {fileID: 643621236}
+  worldCamera: {fileID: 2129476710}
 --- !u!114 &1062469753
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5371,7 +5378,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9811321, g: 0.36561054, b: 0.36561054, a: 1}
+  m_Color: {r: 1, g: 0, b: 0.81019783, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -5402,7 +5409,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-2306
+  m_Name: pb_Mesh-6982
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -5588,14 +5595,14 @@ RectTransform:
   m_GameObject: {fileID: 1131166682}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.11107, y: 0.11107, z: 0.11107}
+  m_LocalScale: {x: 0.26663464, y: 0.26663464, z: 0.26663464}
   m_Children: []
   m_Father: {fileID: 1608203491}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -43.2, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1131166684
@@ -5612,6 +5619,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   followTarget: {fileID: 764428632}
   canvasRect: {fileID: 1608203491}
+  camera: {fileID: 2129476710}
 --- !u!114 &1131166685
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5625,7 +5633,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 0.6862745}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 0
@@ -7055,6 +7063,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   followTarget: {fileID: 764428632}
   canvasRect: {fileID: 0}
+  camera: {fileID: 0}
 --- !u!114 &1194948030
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7135,7 +7144,7 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 1, g: 0.85487294, b: 0, a: 1}
+  m_Color: {r: 1, g: 0.89843947, b: 0.4198113, a: 1}
   m_Intensity: 1
   m_Range: 3.45
   m_SpotAngle: 30
@@ -7356,7 +7365,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-2330
+  m_Name: pb_Mesh-7006
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -7781,7 +7790,7 @@ Canvas:
   m_GameObject: {fileID: 1608203487}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 1789820053}
   m_PlaneDistance: 5
   m_PixelPerfect: 0
@@ -8764,7 +8773,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-54294
+  m_Name: pb_Mesh22938
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -8928,7 +8937,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-49398
+  m_Name: pb_Mesh22774
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -9479,14 +9488,14 @@ RectTransform:
   m_GameObject: {fileID: 2133121532}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.11107, y: 0.11107, z: 0.11107}
+  m_LocalScale: {x: 0.24659762, y: 0.24659762, z: 0.24659762}
   m_Children: []
   m_Father: {fileID: 1608203491}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 47.9, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2133121534
@@ -9501,7 +9510,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4fa19b82219a4440973113a2708c1d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvsRect: {fileID: 1608203491}
+  canvasRect: {fileID: 1608203491}
 --- !u!114 &2133121535
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9515,7 +9524,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.05882353}
+  m_Color: {r: 0, g: 0.90429544, b: 1, a: 1}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 0

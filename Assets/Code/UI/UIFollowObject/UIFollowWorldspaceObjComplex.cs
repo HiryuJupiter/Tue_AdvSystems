@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
+//This is more reliable than the simple version.
 public class UIFollowWorldspaceObjComplex : MonoBehaviour
 {
     public RectTransform canvsRect;
@@ -23,7 +25,7 @@ public class UIFollowWorldspaceObjComplex : MonoBehaviour
     void Update()
     {
         //Just use Camera.main instead of world camera
-        Vector2 viewPos = worldCamera.WorldToViewportPoint(followTarget.position);
+        Vector2 viewPos = Camera.main.WorldToViewportPoint(followTarget.position);
         Vector2 screenPos = new Vector2(viewPos.x * canvasSize.x - uiOffset.x,
             viewPos.y * canvasSize.y - uiOffset.y);
 
