@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-//This is more reliable than the simple version.
 public class UIFollowWorldspaceOne : MonoBehaviour
 {
     public RectTransform canvasRect;
@@ -28,7 +27,7 @@ public class UIFollowWorldspaceOne : MonoBehaviour
         Vector2 screenPos = new Vector2(viewPos.x * canvasSize.x - uiOffset.x,
             viewPos.y * canvasSize.y - uiOffset.y);
 
-        myRect.anchoredPosition = screenPos;
+        myRect.localPosition = screenPos;
     }
 }
 

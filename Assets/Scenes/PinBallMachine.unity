@@ -1460,7 +1460,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 0.85487294, b: 0, a: 1}
   m_Intensity: 1
-  m_Range: 3.45
+  m_Range: 4.18
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -1707,7 +1707,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh22684
+  m_Name: pb_Mesh17244
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1970,7 +1970,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh22758
+  m_Name: pb_Mesh17318
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4489,7 +4489,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-7030
+  m_Name: pb_Mesh61076
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4653,7 +4653,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-6562
+  m_Name: pb_Mesh-1638
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -5330,7 +5330,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1062469751
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5362,9 +5362,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f38e2fb6a092ef44f9be4962514ba4d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvsRect: {fileID: 1608203491}
+  canvasRect: {fileID: 0}
   followTarget: {fileID: 643621236}
-  worldCamera: {fileID: 2129476710}
 --- !u!114 &1062469753
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5409,7 +5408,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-6982
+  m_Name: pb_Mesh-2058
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -5585,7 +5584,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1131166683
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5617,9 +5616,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6bc9aa3c3208cd41b8661af3ef57528, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvas: {fileID: 0}
   followTarget: {fileID: 764428632}
-  canvasRect: {fileID: 1608203491}
-  camera: {fileID: 2129476710}
 --- !u!114 &1131166685
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7039,7 +7037,7 @@ RectTransform:
   m_GameObject: {fileID: 1194948026}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.17929, y: 0.17929, z: 0.17929}
   m_Children: []
   m_Father: {fileID: 1608203491}
   m_RootOrder: 6
@@ -7061,9 +7059,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6bc9aa3c3208cd41b8661af3ef57528, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvas: {fileID: 1608203490}
   followTarget: {fileID: 764428632}
-  canvasRect: {fileID: 0}
-  camera: {fileID: 0}
 --- !u!114 &1194948030
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7146,7 +7143,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 0.89843947, b: 0.4198113, a: 1}
   m_Intensity: 1
-  m_Range: 3.45
+  m_Range: 4.18
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -7365,7 +7362,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-7006
+  m_Name: pb_Mesh-2082
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -7734,6 +7731,7 @@ GameObject:
   - component: {fileID: 1608203489}
   - component: {fileID: 1608203488}
   - component: {fileID: 1608203492}
+  - component: {fileID: 1608203493}
   m_Layer: 5
   m_Name: '#UIManager_Canvas'
   m_TagString: Untagged
@@ -7790,7 +7788,7 @@ Canvas:
   m_GameObject: {fileID: 1608203487}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_Camera: {fileID: 1789820053}
   m_PlaneDistance: 5
   m_PixelPerfect: 0
@@ -7840,12 +7838,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec87d49e1a4913b428ac01b54651a6c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvasRect: {fileID: 1608203491}
-  canvasTrans: {fileID: 1608203491}
-  totalScoreText: {fileID: 956130965}
-  UICamera: {fileID: 1789820053}
+  canvas: {fileID: 1608203490}
   pf_scoreText: {fileID: 808661203657106436, guid: 5bcb1f9ff42d5fa4f94fd8f7dcf72d1d,
     type: 3}
+--- !u!114 &1608203493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1608203487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a4a9d3786ac2954db4f75202386a4a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  totalScoreText: {fileID: 956130965}
 --- !u!1 &1609456179
 GameObject:
   m_ObjectHideFlags: 0
@@ -8773,7 +8781,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh22938
+  m_Name: pb_Mesh17500
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -8937,7 +8945,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh22774
+  m_Name: pb_Mesh17334
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -9328,7 +9336,7 @@ Light:
   m_Shape: 0
   m_Color: {r: 1, g: 0.85487294, b: 0, a: 1}
   m_Intensity: 1
-  m_Range: 3.45
+  m_Range: 4.18
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -9478,7 +9486,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2133121533
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9510,6 +9518,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4fa19b82219a4440973113a2708c1d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvas: {fileID: 1608203490}
   canvasRect: {fileID: 1608203491}
 --- !u!114 &2133121535
 MonoBehaviour:

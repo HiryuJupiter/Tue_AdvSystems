@@ -8,7 +8,7 @@ public class DragAndShoot : MonoBehaviour
     [SerializeField] float maxMagnitude = 20;
 
     //Reference
-    UIManager uiM;
+    ScoreTextSpawner uiM;
 
     //Drag status
     Rigidbody dragTarget;
@@ -34,7 +34,7 @@ public class DragAndShoot : MonoBehaviour
 
     void Start()
     {
-        uiM = UIManager.Instance;
+        uiM = ScoreTextSpawner.Instance;
     }
 
     private void Update()

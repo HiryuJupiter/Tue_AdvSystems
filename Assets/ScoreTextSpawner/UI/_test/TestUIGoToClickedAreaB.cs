@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UIFollowWorldspaceObjTwo : MonoBehaviour
+public class TestUIGoToClickedAreaB : MonoBehaviour
 {
     public Canvas canvas;
-    public Transform followTarget;
     RectTransform canvasRect;
     RectTransform myRect;
 
@@ -18,15 +17,18 @@ public class UIFollowWorldspaceObjTwo : MonoBehaviour
     {
         myRect = GetComponent<RectTransform>();
         canvasRect = canvas.GetComponent<RectTransform>();
+
         canvasSize = canvasRect.sizeDelta;
         uiOffset = canvasSize * 0.5f;
-
         scaleFactor = canvas.scaleFactor;
     }
 
-    void Update()
+    public void GoToLocation(Vector3 targetPosition)
     {
-        Vector2 screenPos = Camera.main.WorldToScreenPoint(followTarget.position) / scaleFactor;
-        myRect.anchoredPosition = screenPos - uiOffset;
+        Vector2 viewPos = Camera.main.WorldToViewportPoint(targetPosition);
+        Vector2 screenPos = new Vector2(viewPos.x * canvasSize.x - uiOffset.x,
+            viewPos.y * canvasSize.y - uiOffset.y);
+
+        myRect.localPosition = screenPos ;
     }
 }

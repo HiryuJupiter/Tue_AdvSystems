@@ -5,21 +5,19 @@ using System.Collections.Generic;
 
 public class UIScoreTextObjectPool
 {
-    Vector3 offscreen = new Vector3(-100, -100, -100);
-
     List<GameObject> active = new List<GameObject>();
     List<GameObject> inactive = new List<GameObject>();
     GameObject prefab;
     Transform parent;
 
-    RectTransform canvasRect;
+    Canvas canvas;
 
     //Constructor
-    public UIScoreTextObjectPool(GameObject prefab, RectTransform canvasRect, Transform parent)
+    public UIScoreTextObjectPool(GameObject prefab, Canvas canvas)
     {
         this.prefab = prefab;
-        this.canvasRect = canvasRect;
-        this.parent = parent;
+        this.canvas = canvas;
+        parent = canvas.transform;
 
         if (prefab.GetComponent<IUITextPoolable>() == null)
         {
@@ -27,7 +25,7 @@ public class UIScoreTextObjectPool
         }
     }
 
-    public GameObject Spawn(string text, Vector2 targetPosition)
+    public GameObject Spawn(string text, Vector3 targetPosition)
     {
         GameObject p;
         if (inactive.Count > 0)
@@ -41,8 +39,7 @@ public class UIScoreTextObjectPool
         {
             //If object pool is empty, then spawn a new object.
             p = GameObject.Instantiate(prefab, targetPosition, Quaternion.identity, parent);
-            p.GetComponent<IUITextPoolable>().SetUp(this, canvasRect);
-            p.transform.parent = parent;
+            p.GetComponent<IUITextPoolable>().SetUp(this, canvas);
         }
         p.GetComponent<IUITextPoolable>().Activation(text, targetPosition);
         active.Add(p);

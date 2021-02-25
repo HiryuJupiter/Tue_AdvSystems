@@ -10,6 +10,7 @@ public class RagdollBrain : MonoBehaviour
     
 
     Settings settings;
+    ScoreTextSpawner scoreSpawner;
     UIManager ui;
 
     public void Teleport (Vector3 vector3)
@@ -29,6 +30,7 @@ public class RagdollBrain : MonoBehaviour
     void Start()
     {
         settings = Settings.Instance;
+        scoreSpawner = ScoreTextSpawner.Instance;
         ui = UIManager.Instance;
     }
 
@@ -41,7 +43,7 @@ public class RagdollBrain : MonoBehaviour
             ui.SetTotalScore(TotalScore);
 
             //Pop-up text
-            ui.SpawnScoreText(collision.contacts[0].point, impactScore);
+            scoreSpawner.SpawnScoreText(collision.contacts[0].point, impactScore);
             
         }
     }
